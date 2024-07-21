@@ -1,4 +1,6 @@
-﻿namespace Assignment_opp_
+﻿using Assignment_opp_.Interface;
+
+namespace Assignment_opp_
 {
     internal class Program
     {
@@ -59,6 +61,36 @@
             #endregion
             #endregion
             #region part 2
+            #region q 1
+            //ICircle circle = new Circle { Radius = 10 };
+            //circle.DisplayShapeInfo();
+
+            //IRectangle rectangle = new Rectangle { Length = 2, Width = 4 };
+            //rectangle.DisplayShapeInfo();
+            #endregion
+            #region q2
+            //IAuthenticationService authService = new BasicAuthenticationService();
+
+            //string username = "bassim";
+            //string password = "1234";
+            //string role = "admin";
+
+            //bool Authenticated = authService.AuthenticateUser(username, password);
+            //bool Authorized = authService.AuthorizeUser(username, role);
+
+            //Console.WriteLine($"Authenticated: {Authenticated}");
+            //Console.WriteLine($"Authorized: {Authorized}");
+
+            #endregion
+            #region Q3
+            INotificationService emailService = new EmailNotificationService();
+            INotificationService smsService = new SmsNotificationService();
+            INotificationService pushService = new PushNotificationService();
+
+            emailService.SendNotification("bassim@gmail.com", " Email!");
+            smsService.SendNotification("0112267473", " SMS!");
+            pushService.SendNotification("user123", " Push Notification!");
+            #endregion 
 
             #endregion
 

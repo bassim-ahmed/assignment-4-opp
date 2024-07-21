@@ -26,7 +26,7 @@ namespace assignment_4_opp
 
             }
         }
-            static void Main(string[] args)
+            static void main(string[] args)
             {
                 #region Interface
                 //Imytype mytype = new Imytype(); //invalid
